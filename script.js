@@ -18,7 +18,9 @@ document.getElementById("btn").addEventListener("click", function() {
   .then((result) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(result * 2);
+        const multipliedResult = result * 2;
+        document.getElementById("output").innerText = `Result: ${multipliedResult}`;
+        resolve(multipliedResult);
       }, 1000);
     });
   })
@@ -26,7 +28,9 @@ document.getElementById("btn").addEventListener("click", function() {
   .then((result) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(result - 3);
+        const subtractedResult = result - 3;
+        document.getElementById("output").innerText = `Result: ${subtractedResult}`;
+        resolve(subtractedResult);
       }, 1000);
     });
   })
@@ -34,7 +38,9 @@ document.getElementById("btn").addEventListener("click", function() {
   .then((result) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(result / 2);
+        const dividedResult = result / 2;
+        document.getElementById("output").innerText = `Result: ${dividedResult}`;
+        resolve(dividedResult);
       }, 1000);
     });
   })
@@ -42,13 +48,11 @@ document.getElementById("btn").addEventListener("click", function() {
   .then((result) => {
     return new Promise((resolve) => {
       setTimeout(() => {
-        resolve(result + 10);
+        const finalResult = result + 10;
+        document.getElementById("output").innerText = `Final Result: ${finalResult}`;
+        resolve(finalResult);
       }, 1000);
     });
-  })
-  // Step 7: Display the final result
-  .then((result) => {
-    document.getElementById("output").innerText = `Final Result: ${result}`;
   })
   // Handle any errors
   .catch((error) => {
